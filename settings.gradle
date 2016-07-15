@@ -1,0 +1,4 @@
+rootProject.name = 'csr'
+include ':csr-week1'
+
+project(':csr-week1').projectDir = "$rootDir/csr-week1" as File

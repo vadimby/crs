@@ -1,0 +1,19 @@
+allprojects  {
+	apply plugin: 'maven'
+	group = 'by.vadim.csr'
+	version = '0.0.1-SNAPSHOT'
+}
+
+subprojects {
+	buildscript {
+		repositories{
+			jcenter()
+			mavenCentral()
+		}
+	}
+	
+	repositories {	
+		mavenLocal()
+		mavenCentral()
+	}
+}
