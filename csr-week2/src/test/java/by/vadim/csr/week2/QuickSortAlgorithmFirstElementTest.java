@@ -1,5 +1,9 @@
 package by.vadim.csr.week2;
 
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsEqual.equalTo;
+import static org.junit.Assert.assertThat;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -56,7 +60,7 @@ public class QuickSortAlgorithmFirstElementTest {
   @Test
   public void test6() {
     
-    test(new TestDataProviderFromConstant(new int[] { 2, 1, 4, 1 }));
+    test(new TestDataProviderFromConstant(new int[] { 2, 1, 4, 3 }));
     
   }
   
@@ -70,7 +74,7 @@ public class QuickSortAlgorithmFirstElementTest {
   @Test
   public void test8() {
     
-    test(new TestDataProviderFromConstant(new int[] { 8, 2, 4, 5, 7, 1 }));
+    test(new TestDataProviderFromConstant(new int[] { 8, 2, 4, 5, 7, 1, 3, 6 }));
     
   }
   
@@ -90,9 +94,17 @@ public class QuickSortAlgorithmFirstElementTest {
   
   private void test(TestDataProvider data) {
     
-    long result = task.calc(data.getData().clone());
+    int[] array = data.getData().clone();
+	long result = task.calc(array);
     
-    System.out.println(String.format("The result is:\t %s.", result));
+    System.out.println(String.format("Size: %s and the result is:\t %s.", array.length, result));
+    
+	int p = 0;
+	for (int i : array) {
+		assertThat(i, is(equalTo(p + 1)));
+		assertThat(i, is(equalTo(p + 1)));
+		p = i;
+	}
   }
   
 }
