@@ -1,0 +1,16 @@
+package by.vadim.csr.week2;
+
+public class QuickSortAlgorithmLastElement implements SortAlgorithm {
+  
+  @Override
+  public SortAlgorithmResult sortAndCalc(int[] array) {
+    if (array.length <= 1) {
+      return new QuickSortAlgorithmResult(0, array);
+    }
+    
+    
+    
+    return new QuickSortAlgorithmResult(0, array);
+  }
+  
+}

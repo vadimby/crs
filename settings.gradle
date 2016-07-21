@@ -1,4 +1,6 @@
 rootProject.name = 'csr'
 include ':csr-week1'
+include ':csr-week2'
 
 project(':csr-week1').projectDir = "$rootDir/csr-week1" as File
+project(':csr-week2').projectDir = "$rootDir/csr-week2" as File
