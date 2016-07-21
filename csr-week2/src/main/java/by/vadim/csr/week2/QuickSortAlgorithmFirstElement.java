@@ -14,7 +14,6 @@ public class QuickSortAlgorithmFirstElement implements SortAlgorithm {
   }
   
   public SortAlgorithmResult sortAndCalc(int[] a, int start, int end) {
-    
     if (end - start <= 1) {
       return new QuickSortAlgorithmResult(0, a);
     }
@@ -24,7 +23,7 @@ public class QuickSortAlgorithmFirstElement implements SortAlgorithm {
     SortAlgorithmResult sortAndCalc = sortAndCalc(a, start, pivotIndex);
     SortAlgorithmResult sortAndCalc2 = sortAndCalc(a, pivotIndex, end);
     
-    return new QuickSortAlgorithmResult(0, a);
+    return new QuickSortAlgorithmResult(sortAndCalc.getNumberOfComparisons() + sortAndCalc2.getNumberOfComparisons() + end - start - 1, a);
   }
   
   private int partition(int[] a, int pivotIndex, int start, int end) {
