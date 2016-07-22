@@ -18,7 +18,7 @@ public class QuickSortAlgorithmFirstElement implements SortAlgorithm {
       return new QuickSortAlgorithmResult(0, a);
     }
     
-    int pivotIndex = pivotStrategy.getPivot(a, start, end);
+    int pivotIndex = pivotStrategy.getPivot(a, start, end - 1);
     pivotIndex = partition(a, pivotIndex, start, end);
     SortAlgorithmResult sortAndCalc = sortAndCalc(a, start, pivotIndex - 1);
     SortAlgorithmResult sortAndCalc2 = sortAndCalc(a, pivotIndex, end);

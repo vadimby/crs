@@ -7,7 +7,7 @@ import static org.junit.Assert.assertThat;
 import org.junit.Before;
 import org.junit.Test;
 
-public class QuickSortAlgorithmLastElementTest {
+public class QuickSortAlgorithmMedianElementTest {
 
 	private static final String SOURCE_FILENAME = "QuickSort.txt";
 
@@ -15,7 +15,7 @@ public class QuickSortAlgorithmLastElementTest {
 
 	@Before
 	public void setup() {
-		task = new Task(new QuickSortAlgorithmFirstElement(new ChoosePivotStrategyEnd()));
+		task = new Task(new QuickSortAlgorithmFirstElement(new ChoosePivotStrategyMedian()));
 	}
 
 	@Test

@@ -50,10 +50,10 @@ public class Task {
 	}
 
 	public long calc(int[] array) {
-		printArray(array);
+		//printArray(array);
 		long numberOfComparisons = algorithm.sortAndCalc(array).getNumberOfComparisons();
 
-		printArray(array);
+		//printArray(array);
 		return numberOfComparisons;
 	}
 
